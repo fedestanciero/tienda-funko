@@ -1,0 +1,20 @@
+.icon-cart{
+    cursor: pointer;
+}
+
+img{
+    width: 40%;
+}
+
+.quantity-display{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: orange;
+    border-radius: 50%;
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    line-height: 17px;
+}
