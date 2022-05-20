@@ -22,7 +22,7 @@ export default function NavBar (){
                         <Link to="/" style={{textDecoration: "none"}}>
                             <li className="nav-items">Inicio</li>
                         </Link>
-                        {categoriasMenu.map(categoria => <Link className="nav-items" key={categoria.nameButton} to={`/category/${categoria.name}`}>{categoria.nameButton}</Link>)}
+                        {categoriasMenu.map(categoria => <Link className="nav-items" to={`/category/${categoria.nameButton}`}>{categoria.nameButton}</Link>)}
                         {/* <Link to={`/category/${}`} style={{textDecoration: "none"}}>
                             <li className="nav-items">Marvel</li>
                         </Link>
