@@ -1,0 +1,29 @@
+.itemCount{
+    background-color: rgb(235, 235, 235);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.itemTitle{
+    font-size: 1.2vw;
+    padding: 5px;
+}
+
+.itemQuantity{
+    font-size: 1vw;
+    background-color: white;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    border: solid 1px rgb(207, 207, 207);
+}
+
+.button-add-to-cart{
+    width: 50%;
+    background-color: orange;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    font-size: 1vw;
+}

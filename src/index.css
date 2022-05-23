@@ -16,3 +16,7 @@ code {
   display: flex;
   place-items: center;
 }
+
+.cursor-pointer{
+  cursor: pointer;
+}

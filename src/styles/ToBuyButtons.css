@@ -1,0 +1,25 @@
+.button-ver-pedido{
+    width: 100%;
+    background-color: orange;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    font-size: 1vw;
+}
+
+.button-ver-mas{
+    width: 100%;
+    background-color: orange;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    font-size: 1vw;
+}
+
+.to-buy-buttons-div{
+    background-color: rgb(235, 235, 235);
+    padding: 20px;
+    border-radius: 10px;
+}

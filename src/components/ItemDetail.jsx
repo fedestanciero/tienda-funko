@@ -1,8 +1,20 @@
+import { useState } from "react"
 import "../styles/ItemDetail.css"
-import AddToCartButton from "./AddToCartButton"
+import ItemCount from "./ItemCount"
+import ToBuyButtons from "./ToBuyButtons"
 
 export default function ItemDetail ({product}){
-    
+
+    const [inputType, setInputType] = useState("itemCount")
+
+    // function onAdd (quantity){
+    //     addToCart({quantity})
+    // }
+
+    function handleInputType(){
+        setInputType("comprarButton")
+    }
+
     return(
         <div className="container detail-product">
             <div className="row row-detail-product">
@@ -19,7 +31,10 @@ export default function ItemDetail ({product}){
                     <div className="detail-price">
                         <span>${product.precio}</span>
                     </div>
-                    <AddToCartButton/>
+                    {inputType === "itemCount" ?
+                        <ItemCount product={product} stock={product.stock} handleInputType={handleInputType}/>:
+                        <ToBuyButtons/>
+                    }
                 </div>
             </div>
 

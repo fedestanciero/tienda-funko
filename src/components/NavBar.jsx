@@ -23,15 +23,6 @@ export default function NavBar (){
                             <li className="nav-items">Inicio</li>
                         </Link>
                         {categoriasMenu.map(categoria => <Link className="nav-items" to={`/category/${categoria.nameButton}`}>{categoria.nameButton}</Link>)}
-                        {/* <Link to={`/category/${}`} style={{textDecoration: "none"}}>
-                            <li className="nav-items">Marvel</li>
-                        </Link>
-                        <Link to="/category/dc" style={{textDecoration: "none"}}>
-                            <li className="nav-items">DC</li>
-                        </Link>
-                        <Link to="/category/harry-potter" style={{textDecoration: "none"}}>
-                            <li className="nav-items">Harry Potter</li>
-                        </Link> */}
                     </ul>
                 </div>
                 <div className="col-1 all-centered">

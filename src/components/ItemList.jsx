@@ -2,7 +2,6 @@ import Item from "./Item"
 import "../styles/ItemList.css"
 
 export default function ItemList({products, id}){
-    console.log(id)
     var filteredProducts = []; 
 
     if(id){
@@ -10,7 +9,6 @@ export default function ItemList({products, id}){
     }else{
         filteredProducts = products
     };
-    console.log(filteredProducts)
 
     return(
         <div className="item-list row">
