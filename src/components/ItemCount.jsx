@@ -3,7 +3,7 @@ import { VscChromeMinimize } from "react-icons/vsc";
 import { useState } from "react";
 import "../styles/ItemCount.css"
 
-export default function ItemCount({stock, product, onAdd, handleInputType}){
+export default function ItemCount({stock, onAdd}){
     
     const initial = 1;
 
@@ -21,11 +21,6 @@ export default function ItemCount({stock, product, onAdd, handleInputType}){
         }
     }
 
-    function addToCart() {
-        // onAdd(quantity);
-        handleInputType();
-    }
-
     return(
         <div className="container itemCount">
             <div className="row itemQuantity">
@@ -40,7 +35,7 @@ export default function ItemCount({stock, product, onAdd, handleInputType}){
                 </div>
             </div>
             <div className="row d-flex justify-content-center">
-                <button onClick={addToCart} className="button-add-to-cart">Agregar al carrito</button>
+                <button onClick={() => onAdd(quantity)} className="button-add-to-cart">Agregar al carrito</button>
             </div>
         </div>
     )

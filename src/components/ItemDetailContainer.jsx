@@ -14,7 +14,7 @@ export default function ItemDetailContainer (){
             .then(products => products.find(data => data.id == id))
             .then(item => setProduct(item))
             .catch(error => console.log(error))
-        },2000)
+        },300)
     },[id]);
 
     return(

@@ -1,0 +1,23 @@
+.item-carrito{
+    display: flex;
+    flex-direction: row;
+}
+
+.item-carrito-imagen img{
+    width: 60%;
+}
+
+.item-carrito{
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.delete-icon{
+    color: red;
+    cursor: pointer;
+}
+
+.delete-icon:hover{
+    transform: scale(1.1);    
+}
