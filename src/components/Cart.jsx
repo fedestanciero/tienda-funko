@@ -20,11 +20,11 @@ export default function Cart(){
                     <div className="col-12">
                         <h2>Tu carrito:</h2>
                     </div>
-                    {cartList.map(item =>   <div className="item-carrito row">
-                                                <div className="item-carrito-imagen col-3 all-centered"><img src={item.imagen} alt={item.nombre}/></div>
+                    {cartList.map(item =>   <div key={item.id} className="item-carrito row">
+                                                <div className="item-carrito-imagen col-2 all-centered"><img src={item.imagen} alt={item.nombre}/></div>
                                                 <div className="item-carrito-titulo col-5 all-centered"><span>{item.nombre}</span></div>
                                                 <div className="item-carrito-quantity col-2 all-centered"><span>Cantidad: {item.quantity}</span></div>
-                                                <div className="item-carrito-delete col-1 all-centered"><BsTrashFill className="delete-icon" onClick={eliminarItem({item})}/></div>
+                                                <div className="item-carrito-delete col-1 all-centered"><BsTrashFill className="delete-icon" onClick={() => eliminarItem({item})}/></div>
                                             </div>)}
                 </div>
                 <div className="col-12">

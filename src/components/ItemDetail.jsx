@@ -7,7 +7,7 @@ import "../styles/ItemDetail.css"
 
 export default function ItemDetail ({product}){
 // Importo el useContext que necesito usar. En este caso "CartContext" y hago destructuring del estado o función que voy a usar en este archivo.
-    const {addToCart, cartList} = useContext(CartContext)
+    const {addToCart} = useContext(CartContext)
 
     const [inputType, setInputType] = useState("itemCount")
 
