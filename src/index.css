@@ -14,9 +14,21 @@ code {
 
 .all-centered{
   display: flex;
-  place-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.main-button{
+  width: 50%;
+  background-color: orange;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  color: black;
+  font-size: 1vw;
 }

@@ -11,6 +11,9 @@ export default function CartContextProvider({children}){
 // Creo un useState donde iré agregando los productos y sus cantidades en un array
     const [cartList, setCartList] = useState([])
 
+// Creo este useState para guardar el monto total del carrito
+    const [montoTotalCarrito, setMontoTotalCarrito] = useState(0)
+
 // Creo esta función para chequear si el producto añadido al carrito ya está en el cartList 
     function isInCart(id) {
         return cartList.some(el => el.id === id);
@@ -47,6 +50,8 @@ export default function CartContextProvider({children}){
 // Retorno el CartContext.Provider y le paso como value los estados y funciones que quiero usar globalmente en los children. 
         <CartContext.Provider value={{
             cartList,
+            montoTotalCarrito,
+            setMontoTotalCarrito,
             addToCart,
             vaciarCart,
             eliminarItemCarrito,

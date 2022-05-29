@@ -1,24 +1,10 @@
-import { useState, useContext } from "react"
 import ItemCount from "./ItemCount"
 import ToBuyButtons from "./ToBuyButtons"
 import { CartContext } from "./CartContext"
 
 import "../styles/ItemDetail.css"
 
-export default function ItemDetail ({product}){
-// Importo el useContext que necesito usar. En este caso "CartContext" y hago destructuring del estado o función que voy a usar en este archivo.
-    const {addToCart} = useContext(CartContext)
-
-    const [inputType, setInputType] = useState("itemCount")
-
-    function handleInputType(){
-        setInputType("comprarButton")
-    }
-
-    function onAdd(quantity){
-        addToCart({...product, quantity})
-        handleInputType();
-    }
+export default function ItemDetail ({product, onAdd, inputType}){
 
     return(
         <div className="container detail-product">

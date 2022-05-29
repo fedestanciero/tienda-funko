@@ -13,7 +13,6 @@ export default function IconCart (){
         let cantidad = 0;
         cartList.map(e => cantidad = e.quantity + cantidad)
         setcantidadCarrito(cantidad)
-        console.log(cantidad)
     },[cartList])
 
     return(

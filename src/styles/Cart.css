@@ -4,13 +4,15 @@
 }
 
 .item-carrito-imagen img{
-    width: 100%;
+    width: 80%;
 }
 
 .item-carrito{
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin-top: 20px;
+    border-radius: 10px;
+    height: 150px;
 }
 
 .delete-icon{
@@ -20,4 +22,24 @@
 
 .delete-icon:hover{
     transform: scale(1.1);    
+}
+
+.resumen-pedido-carrito{
+    background-color: #F5F5F7;
+    padding: 20px;
+    border-radius: 10px;
+    height: 400px;
+}
+
+.listado-items-carrito h2{
+    font-weight: 400;
+}
+
+.resumen-pedido-carrito h2{
+    font-weight: 400;
+}
+
+.total-carrito{
+    font-size: 1.5vw;
+    font-weight: 300;
 }

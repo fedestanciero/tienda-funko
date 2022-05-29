@@ -35,7 +35,7 @@ export default function ItemCount({stock, onAdd}){
                 </div>
             </div>
             <div className="row d-flex justify-content-center">
-                <button onClick={() => onAdd(quantity)} className="button-add-to-cart">Agregar al carrito</button>
+                <button onClick={() => onAdd(quantity)} className="main-button">Agregar al carrito</button>
             </div>
         </div>
     )
