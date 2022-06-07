@@ -1,13 +1,17 @@
 import { useContext, useEffect, useState } from "react"
 import { CartContext } from "./CartContext"
 import { Link } from "react-router-dom"
-import "../styles/Cart.css"
+import { collection, getFirestore, addDoc } from "firebase/firestore";
+
 import { BsTrashFill } from "react-icons/bs";
+import "../styles/Cart.css"
 
 
 export default function Cart(){
 
     const {eliminarItemCarrito, vaciarCart, cartList, montoTotalCarrito, setMontoTotalCarrito} = useContext(CartContext)
+
+    const db = getFirestore()
 
     useEffect(() => {
         let montoTotal = 0;
@@ -15,14 +19,25 @@ export default function Cart(){
         setMontoTotalCarrito(montoTotal)
     },[cartList])
 
+    // Enviar pedido a colección en firebase
+
     function armarPedido(){
+        const queryCollectionOrders = collection(db, 'orders')
         let orden = {}
 
         orden.buyer = {name: "Fede", email: "fedestanciero@gmail.com", phone: "3515283956"}
-        orden.total = montoTotal
-        nuevoArray.map((e) => e.id, e.nombre, e.precio)
-        setArray(nuevoArray)
-        console.log(array)
+        orden.total = montoTotalCarrito
+        orden.items = cartList.map(item => {
+            const id = item.id;
+            const name = item.nombre;
+            const price = item.precio;
+            const quantity = item.quantity;
+            return { id, name, price, quantity }
+    });
+
+        addDoc(queryCollectionOrders, orden)
+            .catch(err => console.log(err))
+            .finally(vaciarCart())
     }
 
     return(
