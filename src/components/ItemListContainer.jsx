@@ -1,15 +1,12 @@
 import {useEffect, useState} from "react"
 import {useParams} from "react-router-dom"
-import getFirestoreApp from "../firebase/config";
-import {getFirestore, doc, getDoc, collection, getDocs} from "firebase/firestore"
+import {getFirestore, collection, getDocs, query, where} from "firebase/firestore"
 import ItemList from "./ItemList";
 import MainBanner from "./MainBanner";
 
 export default function ItemListContainer(){
-
-    const [productFirebase, setproductFirebase] = useState({});
-    const [productsFirebase, setproductsFirebase] = useState([]);
     const [product, setProduct] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const {id} = useParams();
 
     // useEffect(() => {
@@ -39,11 +36,21 @@ export default function ItemListContainer(){
         .catch(error => console.log(error))
     },[])
 
+    // Traer productos de Firebase de acuerdo al id
+    useEffect(() => {
+        const db = getFirestore();
+        const queryCollection = collection(db, "items")
+        const queryCollectionFilter = query(queryCollection, where("licencia", "==", `${id}`))
+        getDocs(queryCollectionFilter)
+        .then(resp => setFilteredProducts(resp.docs.map(item => ({id: item.id, ...item.data()}))))
+        .catch(error => console.log(error))
+    },[id])
+
     return(
         <>
         <MainBanner imagen="../../img/portada-home.jpeg"/>
         <div className="itemListContainer container-fluid">
-            <ItemList products={product} id={id}/>
+            <ItemList products={product} id={id} filteredProducts={filteredProducts}/>
         </div>
         </>
     )

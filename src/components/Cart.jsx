@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
 import { CartContext } from "./CartContext"
 import { Link } from "react-router-dom"
 import "../styles/Cart.css"
@@ -14,6 +14,16 @@ export default function Cart(){
         cartList.map(e => montoTotal = (e.precio*e.quantity) + montoTotal)
         setMontoTotalCarrito(montoTotal)
     },[cartList])
+
+    function armarPedido(){
+        let orden = {}
+
+        orden.buyer = {name: "Fede", email: "fedestanciero@gmail.com", phone: "3515283956"}
+        orden.total = montoTotal
+        nuevoArray.map((e) => e.id, e.nombre, e.precio)
+        setArray(nuevoArray)
+        console.log(array)
+    }
 
     return(
         <div className="container">
@@ -54,6 +64,9 @@ export default function Cart(){
                         <span>${montoTotalCarrito}</span>
                         </>
                         }
+                    </div>
+                    <div className="col-12">
+                        <button onClick={armarPedido}>Comprar</button>
                     </div>
                 </div>
             </div>
