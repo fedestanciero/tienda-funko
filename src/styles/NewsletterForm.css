@@ -1,0 +1,36 @@
+.newsletter-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.newsletter-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.newsletter-button button{
+    width: 40%;
+}
+
+.newsletter-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.newsletter-input input{
+    border-radius: 10px;
+    border: gray solid 1px;
+    padding: 5px;
+}
+
+@media (max-width: 700px) {
+    .newsletter-button button{
+        width: 60%;
+        font-size: 4vw;
+    }
+}

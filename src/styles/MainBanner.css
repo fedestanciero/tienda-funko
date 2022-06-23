@@ -1,3 +1,20 @@
 .main-banner img{
     width: 100%;
 }
+
+.main-banner-container{
+    height: 400px;
+    margin-bottom: 1vw;
+}
+
+@media (max-width: 767px) {
+    .main-banner-container {
+        height: 150px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+    .main-banner-container {
+        height: 300px;
+    }
+}

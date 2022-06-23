@@ -9,13 +9,13 @@ export default function ItemCount({stock, onAdd}){
 
     const [quantity, setQuantity] = useState(initial);
 
-    const agregarCantidad = () => {
+    const addQuantity = () => {
         if(quantity<stock){
             setQuantity(quantity+1)
         }
     }
 
-    const restarCantidad = () => {
+    const lessQuantity = () => {
         if(quantity>1){
             setQuantity(quantity-1)
         }
@@ -24,18 +24,18 @@ export default function ItemCount({stock, onAdd}){
     return(
         <div className="container itemCount">
             <div className="row itemQuantity">
-                <div onClick={() => restarCantidad()} className='col-2 d-flex justify-content-center align-items-center cursor-pointer'>
+                <div onClick={() => lessQuantity()} className='col-4 col-md-2 d-flex justify-content-center align-items-center cursor-pointer'>
                     <VscChromeMinimize/>
                 </div>
-                <div className='col-8 d-flex justify-content-center align-items-center'>
+                <div className='col-4 col-md-8 d-flex justify-content-center align-items-center'>
                     <span>{quantity}</span>
                 </div>
-                <div onClick={() => agregarCantidad()} className='col-2 d-flex justify-content-center align-items-center cursor-pointer'>
+                <div onClick={() => addQuantity()} className='col-4 col-md-2 d-flex justify-content-center align-items-center cursor-pointer'>
                     <VscAdd/>
                 </div>
             </div>
             <div className="row d-flex justify-content-center">
-                <button onClick={() => onAdd(quantity)} className="main-button">Agregar al carrito</button>
+                <button onClick={() => onAdd(quantity)} className="button-add-to-cart">Agregar al carrito</button>
             </div>
         </div>
     )

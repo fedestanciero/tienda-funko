@@ -35,3 +35,20 @@
     font-weight: 400;
     margin-bottom: 15px;
 }
+
+@media (max-width: 700px) {
+    .detail-price {
+        font-size: 5vw;
+    }
+    .detail-licence{
+        font-size: 5vw;
+    }
+    .detail-title{
+        font-size: 5vw;
+    }
+    .detail-image{
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    
+}

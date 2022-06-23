@@ -5,21 +5,56 @@
     border-radius: 10px;
     border: none;
     color: black;
-    font-size: 1vw;
+    font-size: 1.3vw;
+    font-weight: 500;
 }
 
 .button-ver-mas{
     width: 100%;
-    background-color: orange;
+    background-color: rgb(200, 200, 200);
     padding: 5px;
     border-radius: 10px;
     border: none;
     color: black;
-    font-size: 1vw;
+    font-size: 1.3vw;
+    font-weight: 500;
 }
 
 .to-buy-buttons-div{
     background-color: rgb(235, 235, 235);
     padding: 20px;
     border-radius: 10px;
+}
+
+.to-buy-buttons-div .row a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.button-ver-mas:hover{
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
+.button-ver-pedido:hover{
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
+@media (max-width: 700px) {
+    .button-ver-mas {
+        width: 60%;
+        font-size: 5vw;
+    }
+    .button-ver-pedido{
+        width: 60%;
+        font-size: 5vw;
+    }
+    .to-buy-buttons-div .row a{
+        padding: 10px;
+        text-decoration: none;
+    }
 }

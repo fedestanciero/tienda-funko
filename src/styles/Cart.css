@@ -29,6 +29,7 @@
     padding: 20px;
     border-radius: 10px;
     height: 400px;
+    margin-left: 0px;
 }
 
 .listado-items-carrito h2{
@@ -43,3 +44,77 @@
     font-size: 1.5vw;
     font-weight: 300;
 }
+
+.div-button_to-check-out{
+    margin-top: 10px;
+}
+
+.div-button_to-check-out button{
+    background-color: orange;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+    font-size: 1.2vw;
+}
+
+.div-button_to-check-out button:hover{
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
+.div-empty-cart{
+    margin-top: 10px;
+}
+
+.div-empty-cart span:hover{
+    transform: scale(1.05);
+    transition: 0.1s;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.empty-cart-text{
+    font-size: 1.5vw;
+}
+
+.see-products-button-div{
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .empty-cart-text{
+        font-size: 5vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center
+    }
+    .empty-cart-image{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .see-products-button-div{
+        text-decoration: none;
+    }
+    .see-products-button-div button{
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 750px) {
+    .resumen-pedido-carrito{
+        margin-top: 30px;
+        height: 200px;
+    }
+    .total-carrito{
+        font-size: 5vw;
+    }
+    .div-button_to-check-out button{
+        font-size: 4vw;
+    }
+}
+

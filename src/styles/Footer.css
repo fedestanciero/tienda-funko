@@ -1,0 +1,25 @@
+footer{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(239, 239, 239);
+    clear: both;
+    position: relative;
+    margin-top: 150px;
+}
+.footer-links{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-links li{
+    list-style: none;
+}
+
+@media (max-width: 700px) {
+    .div-footer-links{
+        margin-top: 30px;
+    }
+    .div-footer-brand{
+        margin-top: 30px;
+    }
+}

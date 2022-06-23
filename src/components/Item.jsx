@@ -7,16 +7,16 @@ export default function Item ({el}){
     return(
         <Link to={`/itemDetail/${el.id}`} style={{ textDecoration: 'none' }} className="product-card col-xs-12 col-sm-5 col-xl-2">
             <div className="product-image text-center">
-                <img src={el.imagen} alt={el.nombre} />
+                <img src={el.image} alt={el.name} />
             </div>
             <div className="product-licence">
-                <span>{el.licencia}</span>
+                <span>{el.licence}</span>
             </div>
             <div className="product-title text-center">
-                <span>{el.nombre}</span>
+                <span>{el.name}</span>
             </div>
             <div className="product-price text-center">
-                <span>${el.precio}</span>
+                <span>${el.price}</span>
             </div>
         </Link>
     )
